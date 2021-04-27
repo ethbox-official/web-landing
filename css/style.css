@@ -1,0 +1,100 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#main {
+    min-height: calc(100vh - 128px);
+    margin-top: 64px;
+}
+
+.btn-skewed {
+    display: inline-block;
+    transform: skewX(-.5rad);
+    border-radius: 8px!important;
+    width: 200px!important;
+}
+
+.btn-skewed > a {
+    display: inline-block;
+    transform: skewX(.5rad);
+    width: 100%;
+}
+
+.bar-height {
+    height: 64px;
+}
+
+.taptarget-height {
+    height: 48px;
+}
+
+.rounded-alot {
+    border-radius: 1rem!important;
+}
+
+.rounded-alot-start {
+    border-radius: 1rem 0 0 1rem!important;
+}
+
+.rounded-alot-end {
+    border-radius: 0 1rem 1rem 0!important;
+}
+
+.btn-eboxprimary {
+    color: white;
+    background: linear-gradient(to bottom right, #afd0ff, #dc13af);
+    border-color: #afd0ff;
+}
+
+.btn-eboxprimary:hover {
+    color: white;
+    background: linear-gradient(to bottom right, #7990b0, #8f0d72);
+    border-color: #7990b0;
+}
+
+.btn-outline-eboxprimary {
+    color: #7990b0;
+    border-color: #7990b0;
+    border-radius: 1rem;
+}
+
+.btn-outline-eboxprimary:hover {
+    color: white;
+    background: linear-gradient(to bottom right, #afd0ff, #dc13af);
+    border-color: #afd0ff;
+}
+
+.bg-eboxdark {
+    background: linear-gradient(to bottom right, #2d2f31, #2b1a27);
+}
+
+.bg-lightalpha {
+    background-color: rgba(255, 255, 255, .8)!important;
+    backdrop-filter: blur(10px);
+}
+
+.container-small {
+    max-width: 420px;
+    width: 100%;
+}
+
+.container-medium {
+    max-width: 840px;
+    width: 100%;
+}
+
+.mb-alot {
+    margin-bottom: 9rem;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-cover {
+    background-size: cover;
+    background-position: 50% 50%;
+}
