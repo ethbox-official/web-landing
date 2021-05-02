@@ -25,25 +25,96 @@
   <body>
     <!-- top bar -->
     <div
-      class="align-items-center bar-height bg-lightalpha d-flex fixed-top justify-content-between px-3 shadow"
+      class="align-items-center bar-height bg-lightalpha d-flex justify-content-between fixed-top px-3 shadow"
     >
-      <a href="#">
-        <img
-          class="taptarget-height"
-          src="img/logo-text.png"
-          alt="Logo of ethbox"
-        />
-      </a>
-      <a
-        href="https://4skinskywalker.github.io/ethbox-dapp-ui/"
-        class="btn btn-eboxprimary rounded-alot text-capitalize"
-        >Testnet beta</a
+      <div>
+        <button
+          class="d-inline-block d-md-none btn position-relative"
+          data-bs-toggle="offcanvas"
+          data-bs-target=".offcanvas"
+        >
+          &#9776;
+        </button>
+        <a href="index.html" class="ms-3">
+          <img class="taptarget-height" src="img/logo.png" />
+        </a>
+      </div>
+
+      <div
+        class="d-none d-md-flex align-items-center justify-content-center mx-auto"
       >
+        <div
+          class="btn btn-eboxprimary btn-skewed position-relative shadow me-lg-4 me-md-3"
+        >
+          <a
+            href="#"
+            class="stretched-link text-decoration-none text-uppercase text-reset"
+          >
+            Testnet
+          </a>
+        </div>
+        <div
+          class="btn btn-eboxprimary btn-skewed position-relative shadow me-lg-4 me-md-3"
+        >
+          <a
+            href="#"
+            class="stretched-link text-decoration-none text-uppercase text-reset"
+          >
+            Staking
+          </a>
+        </div>
+        <div
+          class="btn btn-eboxprimary btn-skewed position-relative shadow me-lg-4 me-md-3"
+        >
+          <a
+            href="#"
+            class="stretched-link text-decoration-none text-uppercase text-reset"
+          >
+            Governance
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="d-block d-md-none offcanvas offcanvas-start bg-eboxdark text-white"
+      style="max-width: 256px"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Navigation</h5>
+        <button
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="links overflow-auto">
+        <a
+          href="#"
+          class="p-3 d-block text-uppercase text-reset text-decoration-none"
+        >
+          <i class="bi bi-box me-1"></i>
+          Testnet
+        </a>
+        <a
+          href="#"
+          class="p-3 d-block text-uppercase text-reset text-decoration-none"
+        >
+          <i class="bi bi-cash-stack me-1"></i>
+          Staking
+        </a>
+        <a
+          href="#"
+          class="p-3 d-block text-uppercase text-reset text-decoration-none"
+        >
+          <i class="bi bi-people me-1"></i>
+          Governance
+        </a>
+      </div>
     </div>
     <!-- end of top bar -->
 
     <!-- main content -->
-    <div id="main">
+    <div class="main">
       <!-- news section -->
       <section
         class="container-fluid py-5"
@@ -67,13 +138,13 @@
               <a
                 href="#"
                 target="_blank"
-                class="btn btn-outline-eboxprimary btn-lg d-block d-md-inline mb-4 mb-md-0 me-md-4 text-capitalize text-light border-light"
+                class="btn btn-outline-eboxprimary rounded-alot btn-lg d-block d-md-inline mb-4 mb-md-0 me-md-4 text-capitalize text-light border-light"
                 >Staking rewards</a
               >
               <a
                 href="https://ethbox.medium.com/introducing-ebox-staking-rewards-4c65c07fc89d"
                 target="_blank"
-                class="btn btn-outline-eboxprimary btn-lg text-capitalize text-light border-light"
+                class="btn btn-outline-eboxprimary rounded-alot btn-lg text-capitalize text-light border-light"
                 >More details</a
               >
             </div>
@@ -157,18 +228,18 @@
               <a
                 href="https://4skinskywalker.github.io/ethbox-dapp-ui/"
                 class="btn btn-eboxprimary rounded-alot btn-lg d-block d-md-inline mb-2 mb-md-0 me-md-4 shadow-lg text-capitalize"
-                >Testnet beta</a
+                >Testnet</a
               >
               <a
                 href="https://info.uniswap.org/token/0x33840024177a7daca3468912363bed8b425015c5"
                 target="_blank"
-                class="btn btn-outline-eboxprimary btn-lg d-block d-md-inline mb-2 mb-md-0 me-md-4 text-capitalize"
+                class="btn btn-outline-eboxprimary rounded-alot btn-lg d-block d-md-inline mb-2 mb-md-0 me-md-4 text-capitalize"
                 >Trade on uniswap</a
               >
               <a
                 href="#"
                 target="_blank"
-                class="btn btn-outline-eboxprimary btn-lg d-block d-md-inline mb-2 mb-md-0 me-md-4 text-capitalize"
+                class="btn btn-outline-eboxprimary rounded-alot btn-lg d-block d-md-inline mb-2 mb-md-0 me-md-4 text-capitalize"
                 >Staking rewards</a
               >
             </div>
@@ -176,14 +247,14 @@
               <a
                 href="docs/lightpaper.pdf"
                 target="_blank"
-                class="btn btn-outline-eboxprimary btn-lg d-block d-md-inline mb-2 mb-md-0 me-md-4 text-capitalize"
+                class="btn btn-outline-eboxprimary rounded-alot btn-lg d-block d-md-inline mb-2 mb-md-0 me-md-4 text-capitalize"
               >
                 <i class="bi bi-file-earmark-arrow-down"></i>Lightpaper
               </a>
               <a
                 href="docs/whitepaper.pdf"
                 target="_blank"
-                class="btn btn-outline-eboxprimary btn-lg d-block d-md-inline text-capitalize"
+                class="btn btn-outline-eboxprimary rounded-alot btn-lg d-block d-md-inline text-capitalize"
               >
                 <i class="bi bi-file-earmark-arrow-down"></i>Whitepaper
               </a>
@@ -486,12 +557,12 @@
                 >
                   <a
                     href="#"
-                    class="btn btn-outline-eboxprimary d-block d-md-inline mb-4 mb-md-0 me-md-4 text-capitalize text-light border-light"
+                    class="btn btn-outline-eboxprimary rounded-alot d-block d-md-inline mb-4 mb-md-0 me-md-4 text-capitalize text-light border-light"
                     >Staking rewards</a
                   >
                   <a
                     href="https://ethbox.medium.com/introducing-ebox-staking-rewards-4c65c07fc89d"
-                    class="btn btn-outline-eboxprimary text-capitalize text-light border-light"
+                    class="btn btn-outline-eboxprimary rounded-alot text-capitalize text-light border-light"
                     >More details</a
                   >
                 </div>
@@ -1324,13 +1395,13 @@
         <div
           class="align-items-center bar-height col d-flex justify-content-center justify-content-md-start"
         >
-          <a href="#" class="btn fs-5">Home</a>
           <a
             href="https://info.uniswap.org/token/0x33840024177a7daca3468912363bed8b425015c5"
             target="_blank"
             class="btn fs-5"
-            >Uniswap</a
           >
+            <img class="taptarget-height" src="img/uniswap.png"
+          /></a>
         </div>
         <div
           class="align-items-center bar-height col d-flex justify-content-center justify-content-md-end"
