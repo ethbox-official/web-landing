@@ -80,6 +80,17 @@ html {
   backdrop-filter: blur(10px);
 }
 
+.text-eboxprimary {
+  background-color: #afd0ff;
+  background-image: linear-gradient(to bottom right, #afd0ff, #dc13af);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
 .input-nostyle {
   background-color: transparent;
   border: none;
@@ -116,28 +127,54 @@ html {
   background-position: 50% 50%;
 }
 
-.bg-completed {
-  background: repeating-linear-gradient(
-    -55deg,
-    #3a3a3a,
-    #3a3a3a 10px,
-    #2f2f2f 10px,
-    #2f2f2f 20px
-  );
-  backdrop-filter: blur(10px);
-}
-
-.bg-disabled {
-  background: repeating-linear-gradient(
-    -55deg,
-    #fff,
-    #fff 10px,
-    #f8f9fa 10px,
-    #f8f9fa 20px
-  );
-  backdrop-filter: blur(10px);
-}
-
 .links a:hover {
   background: linear-gradient(to bottom right, #afd0ff, #dc13af);
+}
+
+/* Timeline holder */
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+/* Timeline vertical line */
+ul.timeline:before {
+  content: ' ';
+  background: linear-gradient(to bottom, #2d2f31, #2b1a27);
+  position: absolute;
+  left: 1rem;
+  width: 4px;
+  height: 100%;
+  z-index: 400;
+  border-radius: 1rem;
+}
+
+li.timeline-item {
+  margin: 20px 0;
+}
+
+/* Timeline item arrow */
+.timeline-arrow {
+  border-top: 0.5rem solid transparent;
+  border-right: 0.5rem solid #2d2f31;
+  border-bottom: 0.5rem solid transparent;
+  display: block;
+  position: absolute;
+  left: 2rem;
+}
+
+/* Timeline item circle marker */
+li.timeline-item::before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #2d2f31;
+  left: 11px;
+  width: 14px;
+  height: 14px;
+  z-index: 400;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
