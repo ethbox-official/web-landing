@@ -11,7 +11,7 @@ html {
   display: inline-block;
   transform: skewX(-0.5rad);
   border-radius: 8px !important;
-  width: 175px !important;
+  width: 128px !important;
 }
 
 .btn-skewed > a {
@@ -142,7 +142,7 @@ ul.timeline {
 /* Timeline vertical line */
 ul.timeline:before {
   content: ' ';
-  background: linear-gradient(to bottom, #2d2f31, #2b1a27);
+  background: linear-gradient(to bottom, #7990b0, #8f0d72);
   position: absolute;
   left: 1rem;
   width: 4px;
