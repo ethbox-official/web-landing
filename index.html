@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+    <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WE9GVXQ570"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-SWJTL11M1L');
+    </script>
+
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <meta property="og:title" content="ethbox">
+    <meta property="og:image" content="http://www.ethbox.org/img/og-image.jpg">
+    <meta property="og:description" content="With the power of the blockchain, we make sure you'll never lose funds due to a wrong transaction address again.">
+
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon.png" sizes="96x96">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon.png">
 
     <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
-      crossorigin="anonymous"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+    crossorigin="anonymous"
     />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css" />
 
-    <title>ethbox | Home</title>
-  </head>
+    <title>ethbox</title>
+</head>
   <body>
     <!-- top bar -->
     <div
@@ -35,30 +54,42 @@
         >
           &#9776;
         </button>
-        <a href="index.html" class="ms-3">
+        <a href="index.html" class="ms-2">
           <img class="taptarget-height" src="img/logo.png" />
         </a>
       </div>
 
       <div class="d-none d-lg-flex align-items-center justify-content-center mx-auto">
-        <div class="btn btn-eboxprimary btn-skewed position-relative shadow me-lg-2">
-            <a href="#" class="stretched-link text-decoration-none text-uppercase text-reset">Testnet</a>
-        </div>
-        <div class="btn btn-eboxprimary btn-skewed position-relative shadow me-lg-2">
-            <a href="#" class="stretched-link text-decoration-none text-uppercase text-reset">Staking</a>
-        </div>
-        <div class="btn btn-eboxprimary btn-skewed position-relative shadow me-lg-2">
-            <a href="#social-and-partners" class="stretched-link text-decoration-none text-uppercase text-reset">Partners</a>
-        </div>
-        <div class="btn btn-eboxprimary btn-skewed position-relative shadow me-lg-2">
-            <a href="#tokenomics" class="stretched-link text-decoration-none text-uppercase text-reset">Tokenomics</a>
-        </div>
-        <div class="btn btn-eboxprimary btn-skewed position-relative shadow me-lg-2">
-            <a href="#roadmap" class="stretched-link text-decoration-none text-uppercase text-reset">Roadmap</a>
-        </div>
-        <div class="btn btn-eboxprimary btn-skewed position-relative shadow me-lg-2">
-            <a href="#advisors" class="stretched-link text-decoration-none text-uppercase text-reset">People</a>
-        </div>
+        <a href="app/" class="text-decoration-none text-uppercase text-reset me-lg-2 me-xl-4">
+            <div class="btn btn-eboxprimary btn-skewed position-relative shadow">
+                <span>Testnet</span>
+            </div>
+        </a>
+        <a href="app/staking/" class="text-decoration-none text-uppercase text-reset me-lg-2 me-xl-4">
+            <div class="btn btn-eboxprimary btn-skewed position-relative shadow">
+                <span>Staking</span>
+            </div>
+        </a>
+        <a href="#" class="text-decoration-none text-uppercase text-reset me-lg-2 me-xl-4" onclick="scroll_to('#social-and-partners'); return false;">
+            <div class="btn btn-eboxprimary btn-skewed position-relative shadow">
+                <span>Partners</span>
+            </div>
+        </a>
+        <a href="#" class="text-decoration-none text-uppercase text-reset me-lg-2 me-xl-4" onclick="scroll_to('#token'); return false;">
+            <div class="btn btn-eboxprimary btn-skewed position-relative shadow">
+                <span>Token</span>
+            </div>
+        </a>
+        <a href="#" class="text-decoration-none text-uppercase text-reset me-lg-2 me-xl-4" onclick="scroll_to('#roadmap'); return false;">
+            <div class="btn btn-eboxprimary btn-skewed position-relative shadow">
+                <span>Roadmap</span>
+            </div>
+        </a>
+        <a href="#" class="text-decoration-none text-uppercase text-reset" onclick="scroll_to('#advisors'); return false;">
+            <div class="btn btn-eboxprimary btn-skewed position-relative shadow">
+                <span>Team</span>
+            </div>
+        </a>
       </div>
     </div>
 
@@ -71,12 +102,13 @@
         ></button>
       </div>
       <div class="links overflow-auto">
+        <a href="#" class="p-3 d-block text-uppercase text-reset text-decoration-none" onclick="scroll_to('.main'); return false;">Start</a>
+        <a href="#" class="p-3 d-block text-uppercase text-reset text-decoration-none" onclick="scroll_to('#social-and-partners'); return false;">Partners</a>
+        <a href="#" class="p-3 d-block text-uppercase text-reset text-decoration-none" onclick="scroll_to('#token'); return false;">Token</a>
+        <a href="#" class="p-3 d-block text-uppercase text-reset text-decoration-none" onclick="scroll_to('#roadmap'); return false;">Roadmap</a>
+        <a href="#" class="p-3 d-block text-uppercase text-reset text-decoration-none" onclick="scroll_to('#advisors'); return false;">People</a>
         <a href="#" class="p-3 d-block text-uppercase text-reset text-decoration-none">Testnet</a>
         <a href="#" class="p-3 d-block text-uppercase text-reset text-decoration-none">Staking</a>
-        <a href="#social-and-partners" class="p-3 d-block text-uppercase text-reset text-decoration-none">Partners</a>
-        <a href="#tokenomics" class="p-3 d-block text-uppercase text-reset text-decoration-none">Tokenomics</a>
-        <a href="#roadmap" class="p-3 d-block text-uppercase text-reset text-decoration-none">Roadmap</a>
-        <a href="#advisors" class="p-3 d-block text-uppercase text-reset text-decoration-none">People</a>
       </div>
     </div>
     <!-- end of top bar -->
@@ -89,52 +121,52 @@
             <div class="container col-xxl-8">
                 <div class="row align-items-center g-5 py-5">
                     <div class="col-lg-6">
-                        <h1 class="display-5 fw-bold text-capitalize">We make sure you'll never lose funds</h1>
-                        <p class="lead">Ethbox is easy to use and guarantees you won't lose your funds while transacting.</p>
-                        <ul class="list-unstyled fs-5">
+                        <h1 class="display-5 fw-bold">Welcome To ethbox</h1>
+                        <p class="lead mt-3">With the power of the blockchain, we make sure you'll never lose funds due to a wrong transaction address again.</p>
+                        <ul class="list-unstyled fs-5 mt-4">
                             <li>
                                 <i class="me-2 bi bi-dice-1"></i>
                                 Connect your wallet
                             </li>
                             <li>
                                 <i class="me-2 bi bi-dice-2"></i>
-                                Insert a recipient
+                                Insert recipient address
                             </li>
                             <li>
                                 <i class="me-2 bi bi-dice-3"></i>
-                                Choose a passphrase
+                                Choose a passphrase (optional)
                             </li>
                             <li>
                                 <i class="me-2 bi bi-dice-4"></i>
-                                Decide the value
+                                Set transaction value
                             </li>
                             <li>
                                 <i class="me-2 bi bi-dice-5"></i>
-                                Send it!
+                                Send!
                             </li>
                         </ul>
-                        <div class="d-grid gap-2 d-md-flex mb-3">
+                        <div class="d-grid gap-2 d-md-flex mt-5">
                             <a href="https://app.uniswap.org/#/swap?inputCurrency=0x33840024177a7daca3468912363bed8b425015c5" target="_blank" class="btn btn-lg btn-eboxprimary rounded-alot">
-                                Buy on
+                                Uniswap
                                 <img src="img/uniswap.png" alt="logo of uniswap" style="height: 2rem"/>
                             </a>
-                            <a href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x33840024177a7daca3468912363bed8b425015c5" target="_blank" class="btn btn-lg btn-eboxprimary rounded-alot">
-                                Buy on
+                            <a href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x33840024177a7daca3468912363bed8b425015c5" target="_blank" class="btn btn-lg btn-eboxprimary rounded-alot ms-1">
+                                PancakeSwap
                                 <img src="img/pancakeswap.png" alt="logo of pancakeswap" style="height: 2rem"/>
                             </a>
                         </div>
-                        <div class="d-grid gap-2 d-md-flex">
+                        <div class="d-grid gap-2 d-md-flex mt-3">
                             <a
-                                href="docs/lightpaper.pdf"
+                                href="ethbox%20Lightpaper.pdf"
                                 target="_blank"
                                 class="btn btn-lg btn-outline-eboxprimary rounded-alot">
                                 <i class="bi bi-file-earmark-arrow-down"></i>
                                 Lightpaper
                             </a>
                             <a
-                                href="docs/whitepaper.pdf"
+                                href="ethbox%20Whitepaper.pdf"
                                 target="_blank"
-                                class="btn btn-lg btn-outline-eboxprimary rounded-alot">
+                                class="btn btn-lg btn-outline-eboxprimary rounded-alot ms-1">
                                 <i class="bi bi-file-earmark-arrow-down"></i>
                                 Whitepaper
                             </a>
@@ -152,42 +184,17 @@
         </section>
         <!-- end of call to action -->
 
-        <!-- how to cancel -->
-        <section id="how-to-cancel" class="bg-light px-3 py-5 pt-0">
-            <div class="container col-xxl-8 py-5">
-                <div class="rounded-alot fs-4 fst-italic text-center mb-5">
-                    «Well... What if I did something wrong?»
-                </div>
-                <div class="row flex-lg-row-reverse align-items-center g-5">
-                    <div class="col-lg-6">
-                        <h2 class="display-6 fw-bold">Simply cancel</h2>
-                        <p class="lead">
-                            Go to the History tab, locate and cancel your transaction and
-                            get your money back.
-                        </p>
-                    </div>
-                    <div class="col-lg-6">
-                        <img
-                        src="img/how-to/cancel.gif"
-                        class="d-block mx-auto img-fluid rounded-alot shadow"
-                        alt="canceling the transaction"/>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end of how to cancel -->
-
         <!-- how to withdraw -->
-        <section id="how-to-withdraw" class="px-3 py-5">
+        <section id="how-to-withdraw" class="bg-light px-3 py-5">
             <div class="container col-xxl-8 py-5">
                 <div class="rounded-alot fs-4 fst-italic text-center mb-5">
-                    «How does the recipient get the funds?»
+                    « How do I receive funds through ethbox? »
                 </div>
-                <div class="row align-items-center g-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 pt-3">
                     <div class="col-lg-6">
-                        <h2 class="display-6 fw-bold">Just accept</h2>
+                        <h2 class="display-6 fw-bold">Two clicks and a passphrase</h2>
                         <p class="lead">
-                            The recipient of your choice has to connect his wallet, go to the Receive tab and accept the transaction you've sent.
+                            Simply connect to ethbox through your wallet and enter the passphrase you were given by the sender (if any). That's all there is to it.
                         </p>
                     </div>
                     <div class="col-lg-6">
@@ -201,17 +208,40 @@
         </section>
         <!-- end of how to withdraw -->
 
+        <!-- how to cancel -->
+        <section id="how-to-cancel" class="px-3 py-5">
+            <div class="container col-xxl-8 py-5">
+                <div class="rounded-alot fs-4 fst-italic text-center mb-5">
+                    « What if something went wrong? »
+                </div>
+                <div class="row align-items-center g-5 pt-4">
+                    <div class="col-lg-6">
+                        <h2 class="display-6 fw-bold">Cancel transactions at any time</h2>
+                        <p class="lead">
+                            A transaction sent through ethbox can be cancelled by the sender at any time, as long as the recipient hasn't retrieved it yet.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img
+                        src="img/how-to/cancel.gif"
+                        class="d-block mx-auto img-fluid rounded-alot shadow"
+                        alt="canceling the transaction"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of how to cancel -->
+
         <!-- otc trading -->
         <section id="otc-trading" class="bg-light px-3 py-5">
-            <div class="container col-xxl-8">
+            <div class="container col-xxl-8 py-4">
                 <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                     <div class="col-lg-6">
-                        <h2 class="display-6 fw-bold text-capitalize">Exchange tokens with people</h2>
-                        <p class="lead">Trade ETH or any ERC-20 token peer-to-peer, trustlessly.</p>
+                        <h2 class="display-6 fw-bold text-capitalize">100% DeFI OTC Trading</h2>
+                        <p class="lead">Trade ETH and ERC-20 tokens peer-to-peer, trustlessly.</p>
                         <div class="fs-5">
-                            <p>Using the smart contract’s features, over-the-counter (OTC) trading is vastly simplified, as the transfer of funds can only be completed when all terms are satisfied.</p>
-                            <p>Funds can be sent & requested in a single transaction, which may only be fulfilled once both ends have put their part.</p>
-                            <p>This gives users a place which is immune to fraud or scam.</p>
+                            <p>The ethbox smart contract enables simple, straight-forward & safe over-the-counter (OTC) transactions between users.</p>
+                            <p>Funds can be sent & requested in a single transaction, which is only fulfilled once both trading parties have put their part. This way, users are completely safe from any form of fraud or scam.</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -230,10 +260,12 @@
         <section id="anonymity" class="px-3">
             <div class="container col-xxl-8 text-center position-relative" style="height: 432px">
                 <img src="img/eth-logo.png" alt="eht logo" class="position-absolute top-50 start-50 translate-middle img-fluid" style="z-index: 1"/>
-                <header class="position-absolute top-50 start-50 translate-middle w-100" style="z-index: 2">
-                    <h2 class="display-5 fw-bold mb-4 text-capitalize">Anonymity</h2>
-                    <p class="lead">Ethbox sets itself apart by concealing blockchain transactions,
-                    making the sender and receiver untraceable.</p>
+                <header class="position-absolute top-50 start-50 translate-middle w-100 px-5" style="z-index: 2">
+                    <h2 class="display-5 fw-bold mb-4 text-capitalize">Privacy</h2>
+                    <p class="lead fs-4">ethbox facilitates privacy both by design, and with an extra opt-in privacy feature.</p>
+                    <div class="fs-5">
+                        <p>Sending & receiving funds through the ethbox smart contract interrupts the chain of transactions that can be clearly traced back without any effort using blockchain explorers such as Etherscan. Additionally, an extra privacy feature will be implemented (opt-in for a small increase in service fee), which obfuscates the sender's & recipient's addresses.</p>
+                    </div>
                 </header>
             </div>
         </section>
@@ -256,106 +288,106 @@
         <!-- end of video -->
 
         <!-- social and partners -->
-        <section id="social-and-partners" class="px-3 py-5">
+        <section id="social-and-partners" class="px-3 py-5 text-center">
             <div class="container col-xxl-8 py-5">
                 <div class="row g-5">
                     <div class="col-lg-6">
                         <h2 class="display-6 fw-bold">Follow us</h2>
-                        <ul class="list-inline text-center text-lg-start">
-                            <li class="list-inline-item">
-                                <a href="https://www.twitter.com/ethbox_official" target="_blank" class="d-inline-block p-3 text-decoration-none text-info">
-                                    <i class="bi bi-twitter"></i>
-                                    Twitter
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://ethbox.medium.com/" target="_blank" class="d-inline-block p-3 text-decoration-none text-dark">
-                                    <i class="bi bi-link-45deg"></i>
-                                    Medium
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
+                        <ul class="list-inline mt-4">
+                            <li class="list-inline-item scale-on-hover">
                                 <a href="https://www.t.me/ethbox_official" target="_blank" class="d-inline-block p-3 text-decoration-none text-primary">
                                     <i class="bi bi-telegram"></i>
                                     Community
                                 </a>
                             </li>
-                            <li class="list-inline-item">
+                            <li class="list-inline-item scale-on-hover">
                                 <a href="https://www.t.me/ethboxANN" target="_blank" class="d-inline-block p-3 text-decoration-none text-primary">
                                     <i class="bi bi-telegram"></i>
                                     Announcements
                                 </a>
                             </li>
-                            <li class="list-inline-item">
+                            <li class="list-inline-item scale-on-hover">
                                 <a href="https://www.t.me/ethbox_testnet" target="_blank" class="d-inline-block p-3 text-decoration-none text-primary">
                                     <i class="bi bi-telegram"></i>
                                     Testnet
                                 </a>
                             </li>
-                            <li class="list-inline-item">
+                            <li class="list-inline-item scale-on-hover">
+                                <a href="https://www.twitter.com/ethbox_official" target="_blank" class="d-inline-block p-3 text-decoration-none text-info">
+                                    <i class="bi bi-twitter"></i>
+                                    Twitter
+                                </a>
+                            </li>
+                            <li class="list-inline-item scale-on-hover">
+                                <a href="https://ethbox.medium.com/" target="_blank" class="d-inline-block p-3 text-decoration-none text-dark">
+                                    <i class="bi bi-link-45deg"></i>
+                                    Medium
+                                </a>
+                            </li>
+                            <li class="list-inline-item scale-on-hover">
+                                <a href="https://www.github.com/ethbox-official" target="_blank" class="d-inline-block p-3 text-decoration-none text-dark">
+                                    <i class="bi bi-github"></i>
+                                    Github
+                                </a>
+                            </li>
+                            <li class="list-inline-item scale-on-hover">
                                 <a href="mailto:hello@ethbox.org" target="_blank" class="d-inline-block p-3 text-decoration-none text-dark">
                                     <i class="bi bi-envelope"></i>
                                     Email
                                 </a>
                             </li>
-                            <li class="list-inline-item">
+                            <li class="list-inline-item scale-on-hover">
                                 <a href="https://www.reddit.com/user/ethbox" target="_blank" class="d-inline-block p-3 text-decoration-none text-danger">
                                     <i class="bi bi-link-45deg"></i>
                                     Reddit
                                 </a>
                             </li>
-                            <li class="list-inline-item">
+                            <li class="list-inline-item scale-on-hover">
                                 <a href="https://www.facebook.com/Ethbox-163318048851696" target="_blank" class="d-inline-block p-3 text-decoration-none text-primary">
                                     <i class="bi bi-facebook"></i>
                                     Facebook
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://www.github.com/ethbox-official" target="_blank" class="d-inline-block p-3 text-decoration-none text-dark">
-                                    <i class="bi bi-github"></i>
-                                    Github
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-lg-6">
                         <h2 class="display-6 fw-bold">Our partners</h2>
-                        <ul class="list-inline text-center text-lg-start">
-                            <li class="list-inline-item m-2">
+                        <ul class="list-inline mt-4">
+                            <li class="list-inline-item m-2 scale-on-hover">
                                 <a href="https://www.duckdao.io/">
                                     <img src="img/partners/partner_duckdao.png" alt="duckdao logo" class="img-thumbnail"/>
                                 </a>
                             </li>
-                            <li class="list-inline-item m-2">
+                            <li class="list-inline-item m-2 scale-on-hover">
                                 <a href="https://www.vysyn.io/">
                                     <img src="img/partners/partner_vysyn.png" alt="vysyn logo" class="img-thumbnail"/>
                                 </a>
                             </li>
-                            <li class="list-inline-item m-2">
+                            <li class="list-inline-item m-2 scale-on-hover">
                                 <a href="https://www.marketacross.com/">
                                     <img src="img/partners/partner_marketacross.png" alt="marketacross logo" class="img-thumbnail"/>
                                 </a>
                             </li>
-                            <li class="list-inline-item m-2">
+                            <li class="list-inline-item m-2 scale-on-hover">
                                 <a href="https://www.keydifferencemedia.com/">
                                     <img src="img/partners/partner_kdm.png" alt="kdm logo" class="img-thumbnail"/>
                                 </a>
                             </li>
-                            <li class="list-inline-item m-2">
+                            <li class="list-inline-item m-2 scale-on-hover">
                                 <a href="https://www.amplifi.vc/">
                                     <img src="img/partners/partner_amplifi.png" alt="kdm logo" class="img-thumbnail"/>
                                 </a>
                             </li>
-                            <li class="list-inline-item m-2">
+                            <li class="list-inline-item m-2 scale-on-hover">
                                 <a href="https://nabais.capital/">
                                     <img src="img/partners/partner_nabais.png" alt="kdm logo" class="img-thumbnail"/>
                                 </a>
                             </li>
-                            <li class="list-inline-item m-2 position-relative">
+                            <li class="list-inline-item m-2 scale-on-hover position-relative">
                                 <img src="img/partners/partner_tba_3.png" alt="tba3 logo" class="img-thumbnail"/>
                                 <div class="fs-3 position-absolute start-50 top-50 translate-middle">TBA</div>
                             </li>
-                            <li class="list-inline-item m-2 position-relative">
+                            <li class="list-inline-item m-2 scale-on-hover position-relative">
                                 <img src="img/partners/partner_tba_4.png" alt="tba4 logo" class="img-thumbnail"
                                 />
                                 <div class="fs-3 position-absolute start-50 top-50 translate-middle">TBA</div>
@@ -371,37 +403,36 @@
             <div class="py-5">
                 <div class="container col-xxl-8">
                     <header class="text-center mb-5">
-                        <h2 class="display-5 fw-bold text-capitalize">Our token</h2>
-                        <p class="lead">EBOX is our utility & governance token, is used to fuel the system (utility) and manage developments (governance).</p>
+                        <h2 class="display-5 fw-bold text-capitalize">Token Utility</h2>
+                        <p class="lead px-5 pt-3">In conceiving the EBOX token, our main focus was to create a fair & functional ecosystem that's beneficial to every user, as well as sustainable in the long run.</p>
                     </header>
-                    <div class="d-grid gap-3 text-center">
-                        <div class="bg-eboxdark text-white shadow rounded-alot px-3 py-5">
-                            <h2 class="display-5 fw-bold text-eboxprimary text-capitalize">Deflationary</h2>
-                            <p class="lead">Smart contract logic makes sure that 25% of ethbox's generated fee are used to buy back & burn EBOX tokens. All EBOX holders profit from the shrinking token supply.</p>
+                    <div class="d-grid gap-3 text-center pt-3 px-md-5">
+                        <div class="bg-eboxdark text-white shadow rounded-alot px-lg-4 py-5">
+                            <h2 class="display-5 fw-bold text-eboxprimary text-capitalize">Reduced service fee</h2>
+                            <p class="lead px-5 pt-2">Holding EBOX tokens will guarantee a (large!) discount in service fee. For transactions below $300, ethbox is free to use.</p>
+                            <p>Please see our <a href="ethbox%20Whitepaper.pdf" class="text-reset" target="_blank">Whitepaper</a> for further detail on our service fee structure.</p>
+                        </div>
+                        <div class="bg-eboxdark text-white shadow rounded-alot px-lg-4 py-5 mt-2">
+                            <h2 class="display-5 fw-bold text-eboxprimary text-capitalize">Deflationary Token</h2>
+                            <p class="lead px-5 pt-2">Smart contract logic ensures that 25% of ethbox's generated fee are used to buy back & burn EBOX tokens. All EBOX holders profit from the shrinking token supply.</p>
                             <p>A live view will be available in the near future.</p>
                         </div>
-                        <div class="bg-eboxdark text-white shadow rounded-alot px-3 py-5">
-                            <h2 class="display-5 fw-bold text-eboxprimary text-capitalize">Utility</h2>
-                            <p class="lead">Reduced service cost / fee for all ethbox services by holding EBOX token.</p>
-                            <p>For transactions below $300, ethbox is free to use. For more details consult our <a href="docs/whitepaper.pdf" class="text-reset" target="_blank">Whitepaper</a>.</p>
-                        </div>
-                        <div class="bg-eboxdark text-white shadow rounded-alot px-3 py-5">
-                            <h2 class="display-5 fw-bold text-eboxprimary text-capitalize">Governance</h2>
-                            <p class="lead">Standing true to our roots within the community, EBOX holders can vote on key subjects regarding the development of ethbox. Anyone holding EBOX tokens is eligible to participate free of extra charge.</p>
-                            <p>A live view will be available in the near future.</p>
-                        </div>
-                        <div class="bg-eboxdark text-white shadow rounded-alot px-3 py-5">
-                            <h2 class="display-5 fw-bold text-eboxprimary text-capitalize">Staking</h2>
-                            <p class="lead">To support those who support us, ethbox offers staking rewards for the first 4 years after the token generation event (TGE) for everyone holding EBOX tokens.</p>
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                                <a href="#" class="btn btn-lg btn-outline-eboxprimary rounded-alot">Staking Rewards</a>
-                                <a href="#" class="btn btn-lg btn-outline-eboxprimary rounded-alot">More Details</a>
-                            </div>
-                        </div>
-                        <div class="bg-eboxdark text-white shadow rounded-alot px-3 py-5">
-                            <h2 class="display-5 fw-bold text-eboxprimary text-capitalize">Payout</h2>
-                            <p class="lead">As ethbox is a project by the community, for the community, all users will benefit from the success of ethbox. We are regularly sharing part of the generated ethbox service fee to all EBOX holders.</p>
+                        <div class="bg-eboxdark text-white shadow rounded-alot px-lg-4 py-5 mt-2">
+                            <h2 class="display-5 fw-bold text-eboxprimary text-capitalize">Regular Payout</h2>
+                            <p class="lead px-5 pt-2">As ethbox is a project by the community, for the community, all users will benefit from the success of ethbox. We are regularly sharing part of the generated ethbox service fee to all EBOX holders.</p>
                             <p>Further details on the payout plan will follow.</p>
+                        </div>
+                        <div class="bg-eboxdark text-white shadow rounded-alot px-lg-4 py-5 mt-2">
+                            <h2 class="display-5 fw-bold text-eboxprimary text-capitalize">Governance Voting</h2>
+                            <p class="lead px-5 pt-2">Standing true to our roots within the community, EBOX holders can vote on key subjects regarding the development of ethbox. Anyone holding EBOX tokens is eligible to participate free of extra charge.</p>
+                        </div>
+                        <div class="bg-eboxdark text-white shadow rounded-alot px-lg-4 py-5 mt-2">
+                            <h2 class="display-5 fw-bold text-eboxprimary text-capitalize">Staking Rewards</h2>
+                            <p class="lead px-5 pt-2">To support those who support us, ethbox offers staking rewards for the first 4 years after the token generation event (TGE) for everyone holding EBOX tokens.</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center pt-3">
+                                <a href="app/staking/" class="btn btn-lg btn-outline-eboxprimary rounded-alot">Staking Rewards</a>
+                                <a href="https://ethbox.medium.com/introducing-ebox-staking-rewards-4c65c07fc89d" class="btn btn-lg btn-outline-eboxprimary rounded-alot ms-1" target="_blank">More Details</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -411,92 +442,91 @@
 
         <!-- tokenomics -->
         <section id="tokenomics" class="px-3 py-5">
-            <div class="container col-xxl-8 py-5">
-                <header class="text-center mb-5">
-                    <h2 class="display-5 fw-bold text-capitalize">Tokenomics</h2>
-                    <p class="lead">For more details feel free to consult our <a href="docs/whitepaper.pdf" class="text-reset" target="_blank">Whitepaper</a>.</p>
-                    <div class="fs-5">
-                        <span class="fw-bold">Total supply</span>
-                        <span class="text-muted">65,000,000</span>
+            <div class="container col-xxl-8 py-4">
+                <header class="text-center">
+                    <h2 class="display-5 fw-bold text-capitalize">Token Economics</h2>
+                    <div class="fs-5 mt-3">
+                        <span class="fw-bold">Total supply:</span>
+                        <span class="text-muted">65,000,000 EBOX</span>
                     </div>
                     <div class="fs-5">
-                        <span class="fw-bold">Initial supply</span>
-                        <span class="text-muted">8,439,500</span>
+                        <span class="fw-bold">Initial supply:</span>
+                        <span class="text-muted">8,439,500 EBOX</span>
                     </div>
                 </header>
-                <ul class="list-unstyled">
+                <ul class="list-unstyled pt-5 mt-3 px-sm-2 mx-sm-2 px-md-3 mx-md-3 px-lg-5 mx-lg-5">
                     <li>
                       <div class="progress bg-light rounded-alot mb-1" style="height: 2rem">
                         <div class="btn-eboxprimary rounded-alot progress-bar" style="width: 32%"></div>
-                        <div class="fs-5 ms-2">32% Token sale</div>
+                        <div class="fs-5 ms-3">32% Token sale</div>
                       </div>
-                      <p class="ms-2 mb-4">Vesting details <a class="text-reset" href="#token-sale">below</a>.</p>
+                      <p class="ms-2 mb-4 text-muted">See below for <a class="text-reset" href="#token-sale">vesting details</a></p>
                     </li>
                     <li>
                       <div class="progress bg-light rounded-alot mb-1" style="height: 2rem">
                         <div class="btn-eboxprimary rounded-alot progress-bar" style="width: 18%"></div>
-                        <div class="fs-5 ms-2">18% Staking</div>
+                        <div class="fs-5 ms-3">18% Staking</div>
                       </div>
-                      <p class="ms-2 mb-4">Available for staking for 4 years, starting at TGE</p>
+                      <p class="ms-2 mb-4 text-muted">Available for staking for 4 years, starting at TGE</p>
                     </li>
                     <li>
                       <div class="progress bg-light rounded-alot mb-1" style="height: 2rem; background-color: transparent">
                         <div class="btn-eboxprimary rounded-alot progress-bar" style="width: 16%"></div>
-                        <div class="fs-5 ms-2">16% Marketing</div>
+                        <div class="fs-5 ms-3">16% Marketing</div>
                       </div>
-                      <p class="ms-2 mb-4">Monthly distribution over 24 months, starting 6 months after TGE</p>
+                      <p class="ms-2 mb-4 text-muted">Monthly distribution over 24 months, starting 6 months after TGE</p>
                     </li>
                     <li>
                       <div class="progress bg-light rounded-alot mb-1" style="height: 2rem">
                         <div class="btn-eboxprimary rounded-alot progress-bar" style="width: 12%"></div>
-                        <div class="fs-5 ms-2">12% Team</div>
+                        <div class="fs-5 ms-3">12% Team</div>
                       </div>
-                      <p class="ms-2 mb-4">Monthly distribution over 18 months, starting 12 months after TGE</p>
+                      <p class="ms-2 mb-4 text-muted">Monthly distribution over 18 months, starting 12 months after TGE</p>
                     </li>
                     <li>
                       <div class="progress bg-light rounded-alot mb-1" style="height: 2rem">
                         <div class="btn-eboxprimary rounded-alot progress-bar" style="width: 10%"></div>
-                        <div class="fs-5 ms-2">10% Backup</div>
+                        <div class="fs-5 ms-3">10% Backup</div>
                       </div>
-                      <p class="ms-2 mb-4">Monthly distribution over 12 months, starting 24 months after TGE</p>
+                      <p class="ms-2 mb-4 text-muted">Monthly distribution over 12 months, starting 24 months after TGE</p>
                     </li>
                     <li>
                       <div class="progress bg-light rounded-alot mb-1" style="height: 2rem">
                         <div class="btn-eboxprimary rounded-alot progress-bar" style="width: 4%"></div>
-                        <div class="fs-5 ms-2">4% Liquidity</div>
+                        <div class="fs-5 ms-3">4% Liquidity</div>
                       </div>
-                      <p class="ms-2 mb-4">Full unlock at TGE</p>
+                      <p class="ms-2 mb-4 text-muted">Full unlock at TGE</p>
                     </li>
                     <li>
                       <div class="progress bg-light rounded-alot mb-1" style="height: 2rem">
                         <div class="btn-eboxprimary rounded-alot progress-bar" style="width: 3%"></div>
-                        <div class="fs-5 ms-2">3% Advisory</div>
+                        <div class="fs-5 ms-3">3% Advisory</div>
                       </div>
-                      <p class="ms-2 mb-4">Monthly distribution over 12 months, starting at TGE</p>
+                      <p class="ms-2 mb-4 text-muted">Monthly distribution over 12 months, starting at TGE</p>
                     </li>
                     <li>
                       <div class="progress bg-light rounded-alot mb-1" style="height: 2rem">
                         <div class="btn-eboxprimary rounded-alot progress-bar" style="width: 2%"></div>
-                        <div class="fs-5 ms-2">2% Backup</div>
+                        <div class="fs-5 ms-3">2% Backup</div>
                       </div>
-                      <p class="ms-2 mb-4">Monthly distribution over 6 months, starting 6 months after TGE</p>
+                      <p class="ms-2 mb-4 text-muted">Monthly distribution over 6 months, starting 6 months after TGE</p>
                     </li>
                 </ul>
+                <p class="lead text-center pt-5 mt-3">Further detail can be found in our <a href="ethbox%20Whitepaper.pdf" class="text-reset" target="_blank">Whitepaper</a>.</p>
             </div>
         </section>
         <!-- end of tokenomics -->
 
         <!-- token sale -->
         <section id="token-sale" class="bg-light px-3 py-5">
-            <div class="container col-xxl-8">
-                <header class="text-center mb-5">
+            <div class="container col-xxl-8 py-4">
+                <header class="text-center">
                     <h2 class="display-5 fw-bold text-capitalize">Token sale details</h2>
-                    <p class="lead">For more details feel free to consult our <a href="docs/whitepaper.pdf" class="text-reset" target="_blank">Whitepaper</a>.</p>
                 </header>
-                <div class="d-grid gap-3">
-                    <div class="bg-eboxdark text-white shadow rounded-alot p-3">
-                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize">Strategic 6%</h2>
-                        <p class="lead">7% unlocked at token generation event (”TGE”), monthly distribution of other 93% over following 12 months</p>
+                <div class="d-grid gap-3 mt-5 pt-3 px-xl-5">
+                    <div class="bg-eboxdark text-white shadow rounded-alot p-4">
+                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize ms-1">Strategic &ndash; 6%</h2>
+                        <p class="lead mt-3 mb-4 ms-1">7% unlocked at token generation event (”TGE”), monthly distribution of other 93% over following 12 months</p>
                         <div class="d-grid gap-2 d-md-flex">
                             <div class="col bg-white text-dark rounded-alot">
                                 <div class="p-3 pb-0">Amount in EBOX</div>
@@ -516,13 +546,13 @@
                             </div>
                             <div class="col bg-white text-dark rounded-alot">
                                 <div class="p-3 pb-0">Vesting</div>
-                                <div class="fs-5 p-3 pt-0">> 12 months</div>
+                                <div class="fs-5 p-3 pt-0">12 months</div>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-eboxdark text-white shadow rounded-alot p-3">
-                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize">Private Sale 24%</h2>
-                        <p class="lead">20% unlocked at TGE, monthly distribution of other 80% over following 4 months</p>
+                    <div class="bg-eboxdark text-white shadow rounded-alot p-3 mt-3">
+                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize ms-1">Private Sale &ndash; 24%</h2>
+                        <p class="lead mt-3 mb-4 ms-1">20% unlocked at TGE, monthly distribution of other 80% over following 4 months</p>
                         <div class="d-grid gap-2 d-md-flex">
                             <div class="col bg-white text-dark rounded-alot">
                                 <div class="p-3 pb-0">Amount in EBOX</div>
@@ -542,13 +572,13 @@
                             </div>
                             <div class="col bg-white text-dark rounded-alot">
                                 <div class="p-3 pb-0">Vesting</div>
-                                <div class="fs-5 p-3 pt-0">> 4 months</div>
+                                <div class="fs-5 p-3 pt-0">4 months</div>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-eboxdark text-white shadow rounded-alot p-3">
-                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize">Public Sale 2.5%</h2>
-                        <p class="lead">Full unlock at TGE</p>
+                    <div class="bg-eboxdark text-white shadow rounded-alot p-3 mt-3">
+                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize ms-1">Public Sale &ndash; 2.5%</h2>
+                        <p class="lead mt-3 mb-4 ms-1">Fully unlocked at token generation event</p>
                         <div class="d-grid gap-2 d-md-flex">
                             <div class="col bg-white text-dark rounded-alot">
                                 <div class="p-3 pb-0">Amount in EBOX</div>
@@ -568,13 +598,13 @@
                             </div>
                             <div class="col bg-white text-dark rounded-alot">
                                 <div class="p-3 pb-0">Vesting</div>
-                                <div class="fs-5 p-3 pt-0">-</div>
+                                <div class="fs-5 p-3 pt-0">&ndash;</div>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-eboxdark text-white shadow rounded-alot p-3">
-                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize">DuckDAO 2.5%</h2>
-                        <p class="lead">50% unlocked at TGE, monthly distribution of other 50% over following 2 months</p>
+                    <div class="bg-eboxdark text-white shadow rounded-alot p-3 mt-3">
+                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize ms-1">DuckDAO Farmcubation &ndash; 2.5%</h2>
+                        <p class="lead mt-3 mb-4 ms-1">50% unlocked at TGE, monthly distribution of other 50% over following 2 months</p>
                         <div class="d-grid gap-2 d-md-flex">
                             <div class="col bg-white text-dark rounded-alot">
                                 <div class="p-3 pb-0">Amount in EBOX</div>
@@ -594,11 +624,12 @@
                             </div>
                             <div class="col bg-white text-dark rounded-alot">
                                 <div class="p-3 pb-0">Vesting</div>
-                                <div class="fs-5 p-3 pt-0">> 2 months</div>
+                                <div class="fs-5 p-3 pt-0">2 months</div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <p class="lead text-center pt-5 mt-3">Further detail can be found in our <a href="ethbox%20Whitepaper.pdf" class="text-reset" target="_blank">Whitepaper</a>.</p>
             </div>
         </section>
         <!-- end of token sale -->
@@ -606,15 +637,15 @@
         <!-- where to buy -->
         <section id="where-to-buy" class="px-3 py-5">
             <div class="container col-xxl-8 text-center py-5">
-                <h2 class="display-5 fw-bold text-capitalize">Where to buy EBOX</h2>
-                <p class="lead">Ethbox tokens are only available on both Uniswap and Pancakeswap.</p>
-                <div class="d-grid gap-2 d-md-flex  justify-content-md-center">
+                <h2 class="display-5 fw-bold text-capitalize">Trade EBOX!</h2>
+                <p class="lead pt-3">The EBOX token is currently available for trading on Uniswap and PancakeSwap.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center pt-3">
                     <a href="https://app.uniswap.org/#/swap?inputCurrency=0x33840024177a7daca3468912363bed8b425015c5" target="_blank" class="btn btn-lg btn-eboxprimary rounded-alot">
-                        Buy on
+                        Uniswap
                         <img src="img/uniswap.png" alt="logo of uniswap" style="height: 2rem"/>
                     </a>
-                    <a href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x33840024177a7daca3468912363bed8b425015c5" target="_blank" class="btn btn-lg btn-eboxprimary rounded-alot">
-                        Buy on
+                    <a href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x33840024177a7daca3468912363bed8b425015c5" target="_blank" class="btn btn-lg btn-eboxprimary rounded-alot ms-1">
+                        PancakeSwap
                         <img src="img/pancakeswap.png" alt="logo of pancakeswap" style="height: 2rem"/>
                     </a>
                 </div>
@@ -624,51 +655,51 @@
 
         <!-- roadmap -->
         <section id="roadmap" class="bg-light px-3 py-5">
-            <div class="container col-xxl-8 text-center py-5">
+            <div class="container col-xxl-8 text-center py-4">
                 <h2 class="display-5 fw-bold text-capitalize">Roadmap</h2>
             </div>
-            <div class="container col-xxl-8">
+            <div class="container col-lg-10 col-xl-8 col-xxl-6 pt-2 pb-5">
                 <ul class="timeline">
                     <li class="timeline-item bg-eboxdark text-white rounded-alot ms-3 shadow">
                         <div class="mt-4 timeline-arrow"></div>
                         <div class="p-4 position-relative">
-                            <h2 class="display-6 fw-bold text-eboxprimary mb-0">Q3 2020</h2>
-                            <ul class="lead list-unstyled mt-2">
-                                <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Idea generation
+                            <h2 class="display-6 fw-bold text-eboxprimary">Q3 2020</h2>
+                            <ul class="lead list-unstyled py-1 pb-2">
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Idea generation
                                 </li>
-                                <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Team building
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Team building
                                 </li>
-                                <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Definition / visualization of business model
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Definition / visualization of business model
                                 </li>
-                                <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Creating executive summary
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Creating executive summary
                                 </li>
-                                <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Development kickstart – Smart contract based sending / receiving (basic feature)
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Development kickstart – Smart contract based sending / receiving (basic feature)
                                 </li>
-                                <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Branding and logo design
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Branding and logo design
                                 </li>
-                                <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Launch of teaser page
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Launch of teaser page
                                 </li>
-                                <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Finalization of development regarding basic smart contract functionality
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Finalization of development regarding basic smart contract functionality
                                 </li>
-                                <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Alpha release on Rinkeby Testnet
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Alpha release on Rinkeby Testnet
                                 </li>
                             </ul>
                         </div>
@@ -676,109 +707,115 @@
                     <li class="timeline-item bg-eboxdark text-white rounded-alot ms-3 shadow">
                         <div class="mt-4 timeline-arrow"></div>
                         <div class="p-4 position-relative">
-                            <h2 class="display-6 fw-bold text-eboxprimary mb-0"> Q4 2020</h2>
-                            <ul class="lead list-unstyled mt-2">
-                            <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Internal market analysis
-                            </li>
-                            <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Pre-beta release on Rinkeby Testnet
-                            </li>
-                            <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Gathering investors and external stakeholders
-                            </li>
-                            <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Alliance with marketing partners
-                            </li>
+                            <h2 class="display-6 fw-bold text-eboxprimary"> Q4 2020</h2>
+                            <ul class="lead list-unstyled py-1 pb-2">
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Internal market analysis
+                                </li>
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Pre-beta release on Rinkeby Testnet
+                                </li>
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Gathering investors and external stakeholders
+                                </li>
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Alliance with marketing partners
+                                </li>
                             </ul>
                         </div>
                     </li>
                     <li class="timeline-item bg-eboxdark text-white rounded-alot ms-3 shadow">
                         <div class="mt-4 timeline-arrow"></div>
                         <div class="p-4 position-relative">
-                            <h2 class="display-6 fw-bold text-eboxprimary mb-0">Q1 2021</h2>
-                            <ul class="lead list-unstyled mt-2">
-                            <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Beta release on Rinkeby Testnet, including OTC feature
-                            </li>
-                            <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Lightpaper release
-                            </li>
-                            <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Code audit #1 with CertiK Foundation
-                            </li>
-                            <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Sale round #1 - Strategic sale
-                            </li>
-                            <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Sale round #2 - Private sale
-                            </li>
-                            <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                ”Ask Me Anything” with DuckDAO & others
-                            </li>
-                            <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Code audit #2 with CertiK Foundation
-                            </li>
-                            <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Token generation event
-                            </li>
-                            <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Listing on DEX
-                            </li>
-                            <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Start of liquidity provider bonus program
-                            </li>
+                            <h2 class="display-6 fw-bold text-eboxprimary">Q1 2021</h2>
+                            <ul class="lead list-unstyled py-1 pb-2">
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Beta release on Rinkeby Testnet, including OTC feature
+                                </li>
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Lightpaper release
+                                </li>
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Code audit #1 with CertiK Foundation
+                                </li>
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Sale round #1 - Strategic sale
+                                </li>
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Sale round #2 - Private sale
+                                </li>
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    ”Ask Me Anything” with DuckDAO & others
+                                </li>
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Code audit #2 with CertiK Foundation
+                                </li>
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Token generation event
+                                </li>
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Listing on DEX
+                                </li>
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Start of liquidity provider bonus program
+                                </li>
                             </ul>
                         </div>
                     </li>
                     <li class="timeline-item bg-eboxdark text-white rounded-alot ms-3 shadow">
                         <div class="mt-4 timeline-arrow"></div>
                         <div class="p-4">
-                            <h2 class="display-6 fw-bold text-eboxprimary mb-0">Q2 2021</h2>
-                            <ul class="lead list-unstyled mt-2">
-                                <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Gas fee optimization
+                            <h2 class="display-6 fw-bold text-eboxprimary">Q2 2021</h2>
+                            <ul class="lead list-unstyled py-1 pb-2">
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Gas fee optimization
                                 </li>
-                                <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Implementation of staking
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Implementation of staking
                                 </li>
-                                <li class="mb-1">
-                                <i class="bi bi-check2-square"></i>
-                                Address book implementation
+                                <li class="mt-2">
+                                    <i class="bi bi-check2-square"></i>
+                                    Address book implementation
                                 </li>
-                                <li class="mb-1">
-                                Development of payroll feature
+                                <li class="mt-2">
+                                    <i class="bi bi-square"></i>
+                                    Development of payroll feature
                                 </li>
-                                <li class="mb-1">
-                                Privacy feature upgrade
+                                <li class="mt-2">
+                                    <i class="bi bi-square"></i>
+                                    Privacy feature upgrade
                                 </li>
-                                <li class="mb-1">
-                                Mainnet release
+                                <li class="mt-2">
+                                    <i class="bi bi-square"></i>
+                                    Mainnet release
                                 </li>
-                                <li class="mb-1">
-                                Marketing offensive
+                                <li class="mt-2">
+                                    <i class="bi bi-square"></i>
+                                    Marketing offensive
                                 </li>
-                                <li class="mb-1">
-                                Chain extension with Polkadot
+                                <li class="mt-2">
+                                    <i class="bi bi-square"></i>
+                                    Chain extension with Polkadot
                                 </li>
-                                <li class="mb-1">
-                                Further expansion of roadmap
+                                <li class="mt-2">
+                                    <i class="bi bi-square"></i>
+                                    Further expansion of roadmap
                                 </li>
                             </ul>
                         </div>
@@ -804,7 +841,7 @@
                         />
                         <h3 class="h5">Michael Gu</h3>
                         <p class="lead">Boxmining</p>
-                        <div>
+                        <div class="pb-2">
                         <a href="https://www.boxmining.com/" target="_blank" class="btn bg-white rounded-circle fs-3 me-2">
                             <i class="bi bi-globe"></i>
                         </a>
@@ -834,7 +871,10 @@
                         />
                         <h3 class="h5">KVESTOR</h3>
                         <p class="lead">KVESTOR</p>
-                        <div>
+                        <div class="pb-2">
+                        <a href="https://www.vysyn.io/" target="_blank" class="btn bg-white rounded-circle fs-3 me-2">
+                            <i class="bi bi-globe"></i>
+                        </a>
                         <a
                             href="https://www.twitter.com/kvestor11"target="_blank" 
                             class="btn bg-white rounded-circle fs-3 text-info"
@@ -855,7 +895,10 @@
                         />
                         <h3 class="h5">Karnika E. Yashwant</h3>
                         <p class="lead">Mr. KEY</p>
-                        <div>
+                        <div class="pb-2">
+                        <a href="https://www.keydifferencemedia.com/" target="_blank" class="btn bg-white rounded-circle fs-3 me-2">
+                            <i class="bi bi-globe"></i>
+                        </a>
                         <a
                             href="https://www.linkedin.com/in/mrkey"target="_blank" 
                             class="btn bg-white rounded-circle fs-3 text-primary"
@@ -948,51 +991,27 @@
 
     <!-- bottom bar -->
     <div class="container-fluid">
-      <div class="bg-lightalpha row row-cols-1 row-cols-md-2">
-        <div
-          class="align-items-center bar-height col d-flex justify-content-center justify-content-md-start"
-        >
-          <a
-            href="https://info.uniswap.org/token/0x33840024177a7daca3468912363bed8b425015c5"
-            target="_blank"
-            class="btn fs-5"
-          >
-            <img class="taptarget-height" src="img/uniswap.png"
-          /></a>
-          <a
-            href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x33840024177a7daca3468912363bed8b425015c5"
-            target="_blank"
-            class="btn fs-5"
-          >
-            <img class="taptarget-height" src="img/pancakeswap.png"
-          /></a>
+        <div class="bg-lightalpha row row-cols-1 row-cols-md-2">
+            <div class="align-items-center bar-height col d-flex justify-content-center justify-content-md-start">
+                <a href="https://info.uniswap.org/token/0x33840024177a7daca3468912363bed8b425015c5" target="_blank" class="btn fs-5">
+                    <img class="taptarget-height" src="img/uniswap.png"/>
+                </a>
+                <a href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x33840024177a7daca3468912363bed8b425015c5" target="_blank" class="btn fs-5">
+                    <img class="taptarget-height" src="img/pancakeswap.png"/>
+                </a>
+            </div>
+            <div class="align-items-center bar-height col d-flex justify-content-center justify-content-md-end">
+                <a href="https://www.github.com/ethbox-official" target="_blank" class="btn fs-3">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://www.t.me/ethbox_official" target="_blank" class="btn fs-3 text-info">
+                    <i class="bi bi-telegram"></i>
+                </a>
+                <a href="https://www.twitter.com/ethbox_official" target="_blank" class="btn fs-3 text-info">
+                    <i class="bi bi-twitter"></i>
+                </a>
+            </div>
         </div>
-        <div
-          class="align-items-center bar-height col d-flex justify-content-center justify-content-md-end"
-        >
-          <a
-            href="https://www.github.com/ethbox-official"
-            target="_blank"
-            class="btn fs-3"
-          >
-            <i class="bi bi-github"></i>
-          </a>
-          <a
-            href="https://www.t.me/ethbox_official"
-            target="_blank"
-            class="btn fs-3 text-info"
-          >
-            <i class="bi bi-telegram"></i>
-          </a>
-          <a
-            href="https://www.twitter.com/ethbox_official"
-            target="_blank"
-            class="btn fs-3 text-info"
-          >
-            <i class="bi bi-twitter"></i>
-          </a>
-        </div>
-      </div>
     </div>
     <!-- end of bottom bar -->
 
@@ -1002,5 +1021,8 @@
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </body>
 </html>
