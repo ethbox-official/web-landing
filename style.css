@@ -47,23 +47,23 @@
 
 .btn-eboxprimary {
   color: white;
-  background-image: linear-gradient(to right, #afd0ff, #dc13af, #870e6c);
+  background-image: linear-gradient(to bottom right, #afd0ff 12%, #ff00c5);
   border-color: #afd0ff;
-  background-size: 222% auto;
+  background-size: 133% 133%;
   transition: all .5s;
 }
 
 .btn-eboxprimary:hover {
   color: white;
   border-color: #7990b0;
-  background-position: right center;
+  background-position: bottom right;
 }
 
 .btn-outline-eboxprimary {
   color: #7990b0;
   border-color: #7990b0;
-  background-image: linear-gradient(to right, #fff 50%, #dc13af 100%);
-  background-size: 666% auto;
+  background-image: linear-gradient(to bottom right, #fff 50%, #afd0ff 75%, #dc13af 100%);
+  background-size: 333% 333%;
   transition: all .5s;
 }
 
@@ -184,6 +184,6 @@ li.timeline-item::before {
 
 .scale-on-hover:hover {
   position: relative;
-  transform: scale(1.14);
+  transform: scale(0.93);
   transition: all 0.15s ease-out;
 }
