@@ -104,6 +104,57 @@
     <!-- main content -->
     <div class="main">
 
+        <!-- mainnet countdown -->
+        <section id="mainnet-countdown" class="px-3 py-5" style="background: url(img/mainnet-countdown.png); background-size: cover; background-position: center">
+            <div class="container col-xxl-8 text-center text-white">
+                <header>
+                    <h2 class="display-5 fw-bold mb-4 text-capitalize">Mainnet launch countdown</h2>
+                    <p class="lead">Stay tuned for the launch of the mainnet!</p>
+                </header>
+                <style>
+                    #clock {
+                        font-family: monospace;
+                        color: #ffffff;
+                        text-align: center;
+                        color: #daf6ff;
+                        text-shadow: 0 0 20px rgba(10, 175, 230, 1),
+                                     0 0 20px rgba(10, 175, 230, 0);
+                    }
+                    .time {
+                        letter-spacing: 0.05em;
+                        font-size: 80px;
+                        padding: 5px 0;
+                    }
+                    .date {
+                        letter-spacing: 0.1em;
+                        font-size: 24px;
+                    }
+                </style>
+                <div id="clock">
+                    <p class="date">Due date 1/7/21</p>
+                    <p class="time mb-0">...</p>
+                </div>
+                <script>
+                    let timer = document.querySelector('p.time');
+                    let updateTime = () => {
+                        let msToLaunch = new Date('7/1/2021').getTime() - Date.now();
+                        let daysLeft = Math.floor(msToLaunch / 8.64e+7);
+                        msToLaunch = msToLaunch - daysLeft * 8.64e+7;
+                        let hoursLeft = Math.floor(msToLaunch / 3.6e+6);
+                        msToLaunch = msToLaunch - hoursLeft * 3.6e+6;
+                        let minutesLeft = Math.floor(msToLaunch / 60000);
+                        msToLaunch = msToLaunch - minutesLeft * 60000;
+                        let secondsLeft = Math.floor(msToLaunch / 1000);
+                        console.log(daysLeft, hoursLeft, minutesLeft, secondsLeft);
+                        timer.innerHTML = `${daysLeft}d ${hoursLeft}h ${minutesLeft}m ${secondsLeft}s`;
+                    };
+                    updateTime();
+                    setInterval(updateTime, 1000);
+                </script>
+            </div>
+        </section>
+        <!-- end of mainnet countdown -->
+        
         <!-- call to action -->
         <section id="call-to-action" class="px-3 py-5">
             <div class="container col-xxl-8">
