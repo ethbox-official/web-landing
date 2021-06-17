@@ -131,13 +131,13 @@
                     }
                 </style>
                 <div id="clock">
-                    <p class="date">Due date 1/7/21</p>
+                    <p class="date">Due date July 1st 2021 UTC</p>
                     <p class="time mb-0">...</p>
                 </div>
                 <script>
                     let timer = document.querySelector('p.time');
                     let updateTime = () => {
-                        let msToLaunch = new Date('7/1/2021').getTime() - Date.now();
+                        let msToLaunch = new Date(Date.UTC(2021, 6, 1, 0, 0, 0)).getTime() - Date.now();
                         let daysLeft = Math.floor(msToLaunch / 8.64e+7);
                         msToLaunch = msToLaunch - daysLeft * 8.64e+7;
                         let hoursLeft = Math.floor(msToLaunch / 3.6e+6);
