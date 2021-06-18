@@ -170,7 +170,7 @@ li.timeline-item {
 /* Timeline item circle marker */
 li.timeline-item::before {
   content: ' ';
-  background: rgb(41, 41, 41);
+  background: #fff;
   display: inline-block;
   position: absolute;
   border-radius: 50%;
