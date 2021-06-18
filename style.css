@@ -170,7 +170,7 @@ li.timeline-item {
 /* Timeline item circle marker */
 li.timeline-item::before {
   content: ' ';
-  background: white;
+  background: rgb(41, 41, 41);
   display: inline-block;
   position: absolute;
   border-radius: 50%;
@@ -180,6 +180,7 @@ li.timeline-item::before {
   height: 14px;
   z-index: 400;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-top: 1.5rem;
 }
 
 .scale-on-hover:hover {
