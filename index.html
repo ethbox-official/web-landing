@@ -91,7 +91,7 @@
         ></button>
       </div>
       <div class="links overflow-auto">
-        <a href="#" class="p-3 d-block text-uppercase text-reset text-decoration-none">Testnet</a>
+        <a href="app/" class="p-3 d-block text-uppercase text-reset text-decoration-none">Testnet</a>
         <a href="app/staking/" class="p-3 d-block text-uppercase text-reset text-decoration-none">Staking</a>
         <a href="#social-and-partners" class="p-3 d-block text-uppercase text-reset text-decoration-none">Partners</a>
         <a href="#tokenomics" class="p-3 d-block text-uppercase text-reset text-decoration-none">Tokenomics</a>
@@ -160,8 +160,14 @@
 
                             document.querySelector('.expired')
                                 .innerHTML = `
-                                <a href="app/mainnet" class="btn btn-lg btn-eboxprimary rounded-alot mt-3">Start using ethbox</a>
+                                <a href="app/mainnet/" class="btn btn-lg btn-eboxprimary rounded-alot mt-3">Start using ethbox</a>
                                 `;
+
+                            [...document.querySelectorAll('[href="app/"]')]
+                                .forEach(el => {
+                                    el.innerHTML = 'App';
+                                    el.setAttribute('href', 'app/mainnet/');
+                                });
                             
                             clearInterval(timerInterval);
                             return;
