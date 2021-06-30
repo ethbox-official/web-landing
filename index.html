@@ -108,8 +108,8 @@
         <section id="mainnet-countdown" class="px-3 py-5" style="background: url(img/mainnet-countdown.png); background-size: cover; background-position: center">
             <div class="container col-xxl-8 text-center text-white p-3 my-5">
                 <header>
-                    <h2 class="display-5 fw-bold mb-4 text-capitalize">Mainnet launch countdown</h2>
-                    <p class="lead">Stay tuned for our upcoming, long-awaited launch to Ethereum & BSC Mainnet!</p>
+                    <h2 class="countdown-title display-5 fw-bold mb-4 text-capitalize">Mainnet launch countdown</h2>
+                    <p class="countdown-subtitle lead">Stay tuned for our upcoming, long-awaited launch to Ethereum & BSC Mainnet!</p>
                 </header>
                 <style>
                     #clock {
@@ -146,6 +146,18 @@
                     let s = document.querySelector('.s');
                     let updateTime = () => {
                         let msToLaunch = new Date(Date.UTC(2021, 5, 30, 21, 0, 0)).getTime() - Date.now();
+
+                        if (msToLaunch < 0) {
+                            let countdownTitle = document.querySelector('.countdown-title');
+                            countdownTitle.innerHTML = 'Mainnet launched'
+                            let countdownSubtitle = document.querySelector('.countdown-subtitle');
+                            countdownSubtitle.innerHTML = 'The moment you have long awaited has arrived.'
+                            let time = document.querySelector('.time');
+                            time.innerHTML = 'Mainnet is live!'
+                            clearInterval(timerInterval);
+                            return;
+                        }
+
                         let daysLeft = Math.floor(msToLaunch / 8.64e+7);
                         msToLaunch = msToLaunch - daysLeft * 8.64e+7;
                         let hoursLeft = Math.floor(msToLaunch / 3.6e+6);
@@ -160,7 +172,7 @@
                         s.innerHTML = `${secondsLeft}s`;
                     };
                     updateTime();
-                    setInterval(updateTime, 1000);
+                    let timerInterval = setInterval(updateTime, 1000);
                 </script>
             </div>
         </section>
