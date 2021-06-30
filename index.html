@@ -139,6 +139,7 @@
                         <div class="s"></div>
                     </div>
                 </div>
+                <div class="expired"></div>
                 <script>
                     let d = document.querySelector('.d');
                     let h = document.querySelector('.h');
@@ -148,12 +149,20 @@
                         let msToLaunch = new Date(Date.UTC(2021, 5, 30, 21, 0, 0)).getTime() - Date.now();
 
                         if (msToLaunch < 0) {
-                            let countdownTitle = document.querySelector('.countdown-title');
-                            countdownTitle.innerHTML = 'Mainnet launched'
-                            let countdownSubtitle = document.querySelector('.countdown-subtitle');
-                            countdownSubtitle.innerHTML = 'The moment you have long awaited has arrived.'
-                            let time = document.querySelector('.time');
-                            time.innerHTML = 'Mainnet is live!'
+                            document.querySelector('.countdown-subtitle')
+                                .remove();
+
+                            document.querySelector('.date')
+                                .innerHTML = 'Mainnet is now live!';
+
+                            document.querySelector('.time')
+                                .remove();
+
+                            document.querySelector('.expired')
+                                .innerHTML = `
+                                <a href="app/mainnet" class="btn btn-lg btn-eboxprimary rounded-alot">Mainnet</a>
+                                `;
+                            
                             clearInterval(timerInterval);
                             return;
                         }
@@ -295,7 +304,7 @@
         <!-- end of how to cancel -->
 
         <!-- wallets and networks -->
-        <section id="wallets-and-networks" class="px-3 py-5" style="background: url(img/send-trade-receive.png); background-size: contain; background-position: center; background-repeat: no-repeat">
+        <!-- <section id="wallets-and-networks" class="px-3 py-5" style="background: url(img/send-trade-receive.png); background-size: contain; background-position: center; background-repeat: no-repeat">
             <style>
                 .list-of-icons img {
                     border-radius: 100%;
@@ -543,7 +552,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- end of wallets and networks -->
 
         <!-- otc trading -->
