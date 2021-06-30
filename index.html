@@ -71,13 +71,13 @@
             <a href="#social-and-partners" class="stretched-link text-decoration-none text-uppercase text-reset">Partners</a>
         </div>
         <div class="btn btn-eboxprimary btn-skewed position-relative shadow">
-            <a href="#tokenomics" class="stretched-link text-decoration-none text-uppercase text-reset">Tokenomics</a>
+            <a href="#tokenomics" class="stretched-link text-decoration-none text-uppercase text-reset">Token</a>
         </div>
         <div class="btn btn-eboxprimary btn-skewed position-relative shadow">
             <a href="#roadmap" class="stretched-link text-decoration-none text-uppercase text-reset">Roadmap</a>
         </div>
         <div class="btn btn-eboxprimary btn-skewed position-relative shadow">
-            <a href="#advisors" class="stretched-link text-decoration-none text-uppercase text-reset">People</a>
+            <a href="#advisors" class="stretched-link text-decoration-none text-uppercase text-reset">Team</a>
         </div>
       </div>
     </div>
@@ -109,7 +109,7 @@
             <div class="container col-xxl-8 text-center text-white p-3 my-5">
                 <header>
                     <h2 class="display-5 fw-bold mb-4 text-capitalize">Mainnet launch countdown</h2>
-                    <p class="lead">Stay tuned for the launch of the mainnet!</p>
+                    <p class="lead">Stay tuned for our upcoming, long-awaited launch to Ethereum & BSC Mainnet!</p>
                 </header>
                 <style>
                     #clock {
@@ -131,7 +131,7 @@
                     }
                 </style>
                 <div id="clock">
-                    <p class="date">Due date July 1st 2021 UTC</p>
+                    <p class="date">June 30th 2021, 9pm UTC</p>
                     <div class="time d-flex flex-column flex-md-row justify-content-center gap-md-3">
                         <div class="d"></div>
                         <div class="h"></div>
@@ -145,7 +145,7 @@
                     let m = document.querySelector('.m');
                     let s = document.querySelector('.s');
                     let updateTime = () => {
-                        let msToLaunch = new Date(Date.UTC(2021, 6, 1, 0, 0, 0)).getTime() - Date.now();
+                        let msToLaunch = new Date(Date.UTC(2021, 5, 30, 21, 0, 0)).getTime() - Date.now();
                         let daysLeft = Math.floor(msToLaunch / 8.64e+7);
                         msToLaunch = msToLaunch - daysLeft * 8.64e+7;
                         let hoursLeft = Math.floor(msToLaunch / 3.6e+6);
@@ -153,7 +153,7 @@
                         let minutesLeft = Math.floor(msToLaunch / 60000);
                         msToLaunch = msToLaunch - minutesLeft * 60000;
                         let secondsLeft = Math.floor(msToLaunch / 1000);
-                        console.log(daysLeft, hoursLeft, minutesLeft, secondsLeft);
+                        //console.log(daysLeft, hoursLeft, minutesLeft, secondsLeft);
                         d.innerHTML = `${daysLeft}d`;
                         h.innerHTML = `${hoursLeft}h`;
                         m.innerHTML = `${minutesLeft}m`;
@@ -171,7 +171,7 @@
             <div class="container col-xxl-8">
                 <div class="row align-items-center g-5 py-5">
                     <div class="col-lg-6">
-                        <h1 class="display-5 fw-bold text-capitalize">Welcome to ethbox</h1>
+                        <h1 class="display-5 fw-bold">Welcome To ethbox</h1>
                         <p class="lead">With the power of the blockchain, we make sure you'll never lose funds due to a wrong transaction address again.</p>
                         <ul class="list-unstyled fs-5 mb-5">
                             <li>
@@ -180,7 +180,7 @@
                             </li>
                             <li>
                                 <i class="me-2 bi bi-dice-2"></i>
-                                Insert a recipient address
+                                Insert recipient address
                             </li>
                             <li>
                                 <i class="me-2 bi bi-dice-3"></i>
@@ -188,21 +188,21 @@
                             </li>
                             <li>
                                 <i class="me-2 bi bi-dice-4"></i>
-                                Set the transaction value
+                                Set transaction value
                             </li>
                             <li>
                                 <i class="me-2 bi bi-dice-5"></i>
-                                Send it!
+                                Send!
                             </li>
                         </ul>
                         <div class="d-grid gap-3 d-md-flex mb-3">
                             <a href="https://app.uniswap.org/#/swap?inputCurrency=0x33840024177a7daca3468912363bed8b425015c5" target="_blank" class="btn btn-lg btn-eboxprimary rounded-alot">
                                 Uniswap
-                                <img src="img/uniswap.png" alt="logo of uniswap" style="height: 2rem"/>
+                                <img src="img/uniswap.png" alt="Uniswap logo" style="height: 2rem"/>
                             </a>
                             <a href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x33840024177a7daca3468912363bed8b425015c5" target="_blank" class="btn btn-lg btn-eboxprimary rounded-alot">
                                 PancakeSwap
-                                <img src="img/pancakeswap.png" alt="logo of pancakeswap" style="height: 2rem"/>
+                                <img src="img/pancakeswap.png" alt="PancakeSwap logo" style="height: 2rem"/>
                             </a>
                         </div>
                         <div class="d-grid gap-3 d-md-flex">
@@ -238,9 +238,9 @@
         <section id="how-to-withdraw" class="bg-light px-3 py-5">
             <div class="container col-xxl-8 py-5">
                 <div class="rounded-alot fs-4 fst-italic text-center mb-5">
-                    «How does the recipient get the funds?»
+                    « How do I receive funds through ethbox? »
                 </div>
-                <div class="row align-items-center g-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5">
                     <div class="col-lg-6">
                         <h2 class="display-6 fw-bold text-capitalize">Two clicks and a passphrase</h2>
                         <p class="lead">
@@ -262,9 +262,9 @@
         <section id="how-to-cancel" class="px-3 py-5">
             <div class="container col-xxl-8 py-5">
                 <div class="rounded-alot fs-4 fst-italic text-center mb-5">
-                    «Well... What if I did something wrong?»
+                    « What if something went wrong? »
                 </div>
-                <div class="row flex-lg-row-reverse align-items-center g-5">
+                <div class="row align-items-center g-5">
                     <div class="col-lg-6">
                         <h2 class="display-6 fw-bold text-capitalize">Cancel transactions at any time</h2>
                         <p class="lead">
@@ -539,8 +539,8 @@
             <div class="container col-xxl-8">
                 <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                     <div class="col-lg-6">
-                        <h2 class="display-6 fw-bold text-capitalize">100% DeFi OTC trading</h2>
-                        <p class="lead">Trade ETH or any ERC-20 token peer-to-peer, trustlessly.</p>
+                        <h2 class="display-6 fw-bold text-capitalize">100% DeFi OTC Trading</h2>
+                        <p class="lead">Trade ETH and ERC-20 token peer-to-peer, trustlessly.</p>
                         <div class="fs-5">
                             <p>The ethbox smart contract enables simple, straight-forward & safe over-the-counter (OTC) transactions between users.</p>
                             <p>Funds can be sent & requested in a single transaction, which is only fulfilled once both trading parties have put their part. This way, users are completely safe from any form of fraud or scam.</p>
@@ -565,7 +565,7 @@
                 <header class="position-absolute top-50 start-50 translate-middle w-100" style="z-index: 2">
                     <h2 class="display-5 fw-bold mb-4 text-capitalize">Privacy</h2>
                     <p class="lead">ethbox facilitates privacy both by design, and with an extra opt-in privacy feature.</p>
-                    <p class="lead">Sending & receiving funds through ethbox interrupts the chain of transactions that can be clearly traced back. Additionally, an extra privacy feature is upcoming, which obfuscates the sender's & recipient's addresses.</p>
+                    <p class="lead">Sending & receiving funds through ethbox interrupts the chain of transactions that can be clearly traced back. Additionally, an extra privacy feature will be implemented, which obfuscates the sender's & recipient's addresses.</p>
                 </header>
             </div>
         </section>
@@ -654,41 +654,41 @@
                         <h2 class="display-6 fw-bold">Our partners</h2>
                         <ul class="list-inline text-center text-lg-start">
                             <li class="scale-on-hover list-inline-item m-2">
-                                <a href="https://www.duckdao.io/">
-                                    <img src="img/partners/partner_duckdao.png" alt="duckdao logo" class="img-thumbnail"/>
+                                <a href="https://www.duckdao.io/"></a>
+                                    <img src="img/partners/partner_duckdao.png" alt="DuckDAO" class="img-thumbnail"/>
                                 </a>
                             </li>
                             <li class="scale-on-hover list-inline-item m-2">
                                 <a href="https://www.vysyn.io/">
-                                    <img src="img/partners/partner_vysyn.png" alt="vysyn logo" class="img-thumbnail"/>
+                                    <img src="img/partners/partner_vysyn.png" alt="VYSYN" class="img-thumbnail"/>
                                 </a>
                             </li>
                             <li class="scale-on-hover list-inline-item m-2">
                                 <a href="https://www.marketacross.com/">
-                                    <img src="img/partners/partner_marketacross.png" alt="marketacross logo" class="img-thumbnail"/>
+                                    <img src="img/partners/partner_marketacross.png" alt="MarketAcross" class="img-thumbnail"/>
                                 </a>
                             </li>
                             <li class="scale-on-hover list-inline-item m-2">
                                 <a href="https://www.keydifferencemedia.com/">
-                                    <img src="img/partners/partner_kdm.png" alt="kdm logo" class="img-thumbnail"/>
+                                    <img src="img/partners/partner_kdm.png" alt="KeyDifferenceMedia" class="img-thumbnail"/>
                                 </a>
                             </li>
                             <li class="scale-on-hover list-inline-item m-2">
                                 <a href="https://www.amplifi.vc/">
-                                    <img src="img/partners/partner_amplifi.png" alt="kdm logo" class="img-thumbnail"/>
+                                    <img src="img/partners/partner_amplifi.png" alt="Amplifi VC" class="img-thumbnail"/>
                                 </a>
                             </li>
                             <li class="scale-on-hover list-inline-item m-2">
                                 <a href="https://nabais.capital/">
-                                    <img src="img/partners/partner_nabais.png" alt="kdm logo" class="img-thumbnail"/>
+                                    <img src="img/partners/partner_nabais.png" alt="Nabais VC" class="img-thumbnail"/>
                                 </a>
                             </li>
                             <li class="scale-on-hover list-inline-item m-2 position-relative">
-                                <img src="img/partners/partner_tba_3.png" alt="tba3 logo" class="img-thumbnail"/>
+                                <img src="img/partners/partner_tba_3.png" alt="TBA" class="img-thumbnail"/>
                                 <div class="fs-3 position-absolute start-50 top-50 translate-middle">TBA</div>
                             </li>
                             <li class="scale-on-hover list-inline-item m-2 position-relative">
-                                <img src="img/partners/partner_tba_4.png" alt="tba4 logo" class="img-thumbnail"
+                                <img src="img/partners/partner_tba_4.png" alt="TBA" class="img-thumbnail"
                                 />
                                 <div class="fs-3 position-absolute start-50 top-50 translate-middle">TBA</div>
                             </li>
@@ -702,10 +702,10 @@
         <section id="certik-banner" class="px-3 py-5" style="background: url(img/certik-banner.png); background-size: cover; background-position: center">
             <div class="container col-xxl-8 text-center text-white p-3 my-5">
                 <header>
-                    <h2 class="display-5 fw-bold mb-4 text-capitalize">Audited smart contract</h2>
-                    <p class="lead mb-5">Our Smart Contract has been audited by CertiK, the best blockchain auditing firm there is.</p>
+                    <h2 class="display-5 fw-bold mb-4 text-capitalize">Smart contract audit</h2>
+                    <p class="lead mb-5">In order to guarantee the high level of security & trustability that is required for the task we've set out to complete, our smart contract has been audited by our partners at CertiK Foundation.</p>
                     <a href="https://www.certik.org/projects/ethbox" target="_blank" class="btn btn-lg btn-outline-eboxprimary rounded-alot">
-                        Go to audit page
+                        &nbsp;Audit Report&nbsp;
                     </a>
                 </header>
             </div>
@@ -745,7 +745,7 @@
                             <p class="lead">To support those who support us, ethbox offers staking rewards for the first 4 years after the token generation event (TGE) for everyone holding EBOX tokens.</p>
                             <div class="d-grid gap-3 d-md-flex justify-content-md-center">
                                 <a href="app/staking/" class="btn btn-lg btn-outline-eboxprimary rounded-alot">Staking Rewards</a>
-                                <a href="https://ethbox.medium.com/introducing-ebox-staking-rewards-4c65c07fc89d" class="btn btn-lg btn-outline-eboxprimary rounded-alot">More Details</a>
+                                <a href="https://ethbox.medium.com/introducing-ebox-staking-rewards-4c65c07fc89d" class="btn btn-lg btn-outline-eboxprimary rounded-alot">Details</a>
                             </div>
                         </div>
                     </div>
@@ -760,12 +760,12 @@
                 <header class="text-center mb-5">
                     <h2 class="display-5 fw-bold text-capitalize">Token economics</h2>
                     <div class="fs-5">
-                        <span class="fw-bold">Total supply</span>
-                        <span class="text-muted">65,000,000</span>
+                        <span class="fw-bold">Total supply:</span>
+                        <span class="text-muted">65,000,000 EBOX</span>
                     </div>
                     <div class="fs-5">
-                        <span class="fw-bold">Initial supply</span>
-                        <span class="text-muted">8,439,500</span>
+                        <span class="fw-bold">Initial supply:</span>
+                        <span class="text-muted">8,439,500 EBOX</span>
                     </div>
                 </header>
                 <ul class="list-unstyled mb-5">
@@ -774,7 +774,7 @@
                         <div class="btn-eboxprimary rounded-alot progress-bar" style="width: 32%"></div>
                         <div class="fs-5 ms-2">32% Token sale</div>
                       </div>
-                      <p class="ms-2 mb-4">Vesting details <a class="text-reset" href="#token-sale">below</a>.</p>
+                      <p class="ms-2 mb-4">See below for <a class="text-reset" href="#token-sale">vesting details</a></p>
                     </li>
                     <li>
                       <div class="progress bg-light rounded-alot mb-1" style="height: 2rem">
@@ -809,7 +809,7 @@
                         <div class="btn-eboxprimary rounded-alot progress-bar" style="width: 4%"></div>
                         <div class="fs-5 ms-2">4% Liquidity</div>
                       </div>
-                      <p class="ms-2 mb-4">Full unlock at TGE</p>
+                      <p class="ms-2 mb-4">Fully unlocked at TGE</p>
                     </li>
                     <li>
                       <div class="progress bg-light rounded-alot mb-1" style="height: 2rem">
@@ -827,7 +827,7 @@
                     </li>
                 </ul>
                 <div class="text-center">
-                    <p class="lead">For more details feel free to consult our <a href="ethbox%20Whitepaper.pdf" class="text-reset" target="_blank">Whitepaper</a>.</p>
+                    <p class="lead">For further detail, feel free to have a look inside our <a href="ethbox%20Whitepaper.pdf" class="text-reset" target="_blank">Whitepaper</a>.</p>
                 </div>
             </div>
         </section>
@@ -841,7 +841,7 @@
                 </header>
                 <div class="d-grid gap-3 mb-5">
                     <div class="bg-eboxdark text-white shadow rounded-alot p-3">
-                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize">Strategic - 6%</h2>
+                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize">Strategic &ndash; 6%</h2>
                         <p class="lead">7% unlocked at token generation event (”TGE”), monthly distribution of other 93% over following 12 months</p>
                         <div class="d-grid gap-2 d-md-flex">
                             <div class="col bg-white text-dark rounded-alot">
@@ -867,7 +867,7 @@
                         </div>
                     </div>
                     <div class="bg-eboxdark text-white shadow rounded-alot p-3">
-                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize">Private Sale - 24%</h2>
+                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize">Private Sale &ndash; 24%</h2>
                         <p class="lead">20% unlocked at TGE, monthly distribution of other 80% over following 4 months</p>
                         <div class="d-grid gap-2 d-md-flex">
                             <div class="col bg-white text-dark rounded-alot">
@@ -893,8 +893,8 @@
                         </div>
                     </div>
                     <div class="bg-eboxdark text-white shadow rounded-alot p-3">
-                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize">Public Sale  - 2.5%</h2>
-                        <p class="lead">Full unlock at TGE</p>
+                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize">Public Sale &ndash; 2.5%</h2>
+                        <p class="lead">Fully unlocked at TGE</p>
                         <div class="d-grid gap-2 d-md-flex">
                             <div class="col bg-white text-dark rounded-alot">
                                 <div class="p-3 pb-0">Amount in EBOX</div>
@@ -914,12 +914,12 @@
                             </div>
                             <div class="col bg-white text-dark rounded-alot">
                                 <div class="p-3 pb-0">Vesting</div>
-                                <div class="fs-5 p-3 pt-0">-</div>
+                                <div class="fs-5 p-3 pt-0">&ndash;</div>
                             </div>
                         </div>
                     </div>
                     <div class="bg-eboxdark text-white shadow rounded-alot p-3">
-                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize">DuckDAO Farmcubation - 2.5%</h2>
+                        <h2 class="display-6 fw-bold text-eboxprimary text-capitalize">DuckDAO Farmcubation &ndash; 2.5%</h2>
                         <p class="lead">50% unlocked at TGE, monthly distribution of other 50% over following 2 months</p>
                         <div class="d-grid gap-2 d-md-flex">
                             <div class="col bg-white text-dark rounded-alot">
@@ -946,7 +946,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <p class="lead">For more details feel free to consult our <a href="ethbox%20Whitepaper.pdf" class="text-reset" target="_blank">Whitepaper</a>.</p>
+                    <p class="lead">For further detail, feel free to have a look inside our <a href="ethbox%20Whitepaper.pdf" class="text-reset" target="_blank">Whitepaper</a>.</p>
                 </div>
             </div>
         </section>
@@ -956,15 +956,15 @@
         <section id="where-to-buy" class="px-3 py-5">
             <div class="container col-xxl-8 text-center py-5">
                 <h2 class="display-5 fw-bold text-capitalize">Trade EBOX!</h2>
-                <p class="lead">Ethbox tokens are only available on both Uniswap and Pancakeswap.</p>
+                <p class="lead">The EBOX token is currently available for trading on Uniswap and PancakeSwap.</p>
                 <div class="d-grid gap-3 d-md-flex justify-content-md-center">
                     <a href="https://app.uniswap.org/#/swap?inputCurrency=0x33840024177a7daca3468912363bed8b425015c5" target="_blank" class="btn btn-lg btn-eboxprimary rounded-alot">
                         Uniswap
-                        <img src="img/uniswap.png" alt="logo of uniswap" style="height: 2rem"/>
+                        <img src="img/uniswap.png" alt="Uniswap logo" style="height: 2rem"/>
                     </a>
                     <a href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x33840024177a7daca3468912363bed8b425015c5" target="_blank" class="btn btn-lg btn-eboxprimary rounded-alot">
                         PancakeSwap
-                        <img src="img/pancakeswap.png" alt="logo of pancakeswap" style="height: 2rem"/>
+                        <img src="img/pancakeswap.png" alt="PancakeSwap logo" style="height: 2rem"/>
                     </a>
                 </div>
             </div>
