@@ -55,8 +55,8 @@
           &#9776;
         </button>
         <a href="index.html" class="ms-3">
-          <img class="d-inline-block d-lg-none taptarget-height" src="img/logo-cube.png" />
-          <img class="d-none d-lg-inline-block taptarget-height" src="img/logo.png" />
+          <img class="d-inline-block d-xl-none taptarget-height" src="img/logo-cube.png" />
+          <img class="d-none d-xl-inline-block taptarget-height" src="img/logo.png" />
         </a>
       </div>
 
@@ -131,64 +131,11 @@
                     }
                 </style>
                 <div id="clock">
-                    <p class="date">June 30th 2021, 9pm UTC</p>
-                    <div class="time d-flex flex-column flex-md-row justify-content-center gap-md-3">
-                        <div class="d"></div>
-                        <div class="h"></div>
-                        <div class="m"></div>
-                        <div class="s"></div>
-                    </div>
+                    <p class="date">ethbox is now live on Ethereum,<br>Binance Smart Chain & Polygon Mainnet!</p>
                 </div>
-                <div class="expired"></div>
-                <script>
-                    let d = document.querySelector('.d');
-                    let h = document.querySelector('.h');
-                    let m = document.querySelector('.m');
-                    let s = document.querySelector('.s');
-                    let updateTime = () => {
-                        let msToLaunch = new Date(Date.UTC(2021, 5, 30, 21, 0, 0)).getTime() - Date.now();
-
-                        if (msToLaunch < 0) {
-                            document.querySelector('.countdown-subtitle')
-                                .remove();
-
-                            document.querySelector('.date')
-                                .innerHTML = 'ethbox is now live on Ethereum,<br>Binance Smart Chain & Polygon Mainnet!';
-
-                            document.querySelector('.time')
-                                .remove();
-
-                            document.querySelector('.expired')
-                                .innerHTML = `
-                                <a href="app/mainnet/" class="btn btn-lg btn-eboxprimary rounded-alot mt-3">Start using ethbox</a>
-                                `;
-
-                            [...document.querySelectorAll('[href="app/"]')]
-                                .forEach(el => {
-                                    el.innerHTML = 'App';
-                                    el.setAttribute('href', 'app/mainnet/');
-                                });
-                            
-                            clearInterval(timerInterval);
-                            return;
-                        }
-
-                        let daysLeft = Math.floor(msToLaunch / 8.64e+7);
-                        msToLaunch = msToLaunch - daysLeft * 8.64e+7;
-                        let hoursLeft = Math.floor(msToLaunch / 3.6e+6);
-                        msToLaunch = msToLaunch - hoursLeft * 3.6e+6;
-                        let minutesLeft = Math.floor(msToLaunch / 60000);
-                        msToLaunch = msToLaunch - minutesLeft * 60000;
-                        let secondsLeft = Math.floor(msToLaunch / 1000);
-                        //console.log(daysLeft, hoursLeft, minutesLeft, secondsLeft);
-                        d.innerHTML = `${daysLeft}d`;
-                        h.innerHTML = `${hoursLeft}h`;
-                        m.innerHTML = `${minutesLeft}m`;
-                        s.innerHTML = `${secondsLeft}s`;
-                    };
-                    updateTime();
-                    let timerInterval = setInterval(updateTime, 1000);
-                </script>
+                <div class="expired">
+                    <a href="app/mainnet/" class="btn btn-lg btn-eboxprimary rounded-alot mt-3">Start using ethbox</a>
+                </div>
             </div>
         </section>
         <!-- end of mainnet countdown -->
@@ -1395,26 +1342,50 @@
     ></script>
 
     <script>
-        const links = document.querySelectorAll('a[href*="#"]');
-        links.forEach(each => (each.onclick = scrollAnchors));
 
-        function scrollAnchors(e, respond = null) {
-            const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
-            e.preventDefault();
-            var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
-            const targetAnchor = document.querySelector(targetID);
-            if (!targetAnchor) return;
-            const originalTop = distanceToTop(targetAnchor);
-            window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
-            const checkIfDone = setInterval(function() {
-                const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
-                if (distanceToTop(targetAnchor) === 0 || atBottom) {
-                    targetAnchor.tabIndex = '-1';
-                    targetAnchor.focus();
-                    window.history.pushState('', '', targetID);
-                    clearInterval(checkIfDone);
+        let easeInOutQuint = t => t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t; // Easing function found at https://gist.github.com/gre/1650294
+
+        // For every link grab its target element and add the click event to smooth scroll to that element
+        let links = document.querySelectorAll('a[href^="#"]');
+        links.forEach(link => {
+            let targetQuery = link.href.match(/.*(#.*)$/)[1];
+            let targetElement = document.querySelector(targetQuery);
+            link.addEventListener("click", () => 
+                customScrollTo(targetElement, 1000, easeInOutQuint)
+            );
+        });
+
+        function customScrollTo(targetElement, duration, easingFunction) {
+            let start = window.scrollY || window.pageYOffset;
+            let to = targetElement.offsetTop;
+
+            let time = Date.now();
+            let timeElapsed = 0;
+
+            let speed = (to - start) / duration;
+            
+            (function move() {
+
+                if (timeElapsed > duration) {
+                    return;
                 }
-            }, 100);
+
+                timeElapsed = Date.now() - time;
+
+                // Get the displacement of "y"
+                let dy = speed * timeElapsed;
+                let y = start + dy;
+
+                // Map "y" into a range from 0 to 1
+                let _y = (y - start) / (to - start);
+                // Fit "_y" into a curve given by "easingFunction"
+                _y = easingFunction(_y);
+                // Expand "_y" into the original range
+                y = start + (to - start) * _y;
+
+                window.scrollTo(0, y);
+                window.requestAnimationFrame(move);
+            })();
         }
     </script>
   </body>
