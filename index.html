@@ -561,6 +561,30 @@
         </section>
         <!-- end of video -->
 
+        <!-- newsletter -->
+        <section id="newsletter" class="parallax p-5" style="background-image: url('img/mainnet-countdown.png')">
+            <div class="position-relative col-xxl-8 mx-auto p-4 d-flex flex-column align-items-center">
+                <h3 class="display-6">Subscribe</h3>
+                <p class="lead">Receive news about ethbox as soon as they come out!</p>
+                <style>
+                    #newsletter > div > *:not(#x-ray) {
+                        z-index: 2;
+                    }
+                    #x-ray {
+                        z-index: 1;
+                        background-image: url('img/mainnet-countdown.png');
+                        filter: invert(1) hue-rotate(180deg) saturate(0.1) brightness(1.25) drop-shadow(2px 4px 6px black);
+                    }
+                </style>
+                <div id="x-ray" class="position-absolute start-0 end-0 top-0 bottom-0 parallax rounded-alot"></div>
+                <div class="input-group align-self-center w-auto">
+                    <input id="subscribe-address" type="email" class="form-control" placeholder="Your email address">
+                    <button class="btn btn-eboxprimary" id="subscribe-button" disabled="">Button</button>
+                </div>
+            </div>
+        </section>
+        <!-- end of newsletter -->
+
         <!-- social and partners -->
         <section id="social-and-partners" class="px-3 py-5">
             <div class="container col-xxl-8 py-5">
