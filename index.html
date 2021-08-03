@@ -1389,7 +1389,7 @@
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
       crossorigin="anonymous"
     ></script>
-<!--
+
     <script>
 
         let easeInOutQuint = t => t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t; // Easing function found at https://gist.github.com/gre/1650294
@@ -1397,6 +1397,7 @@
         // With this attempt I tried to make the scroll by mouse wheel look smooth
         let delay = ms => new Promise(res => setTimeout(res, ms));
         let dy = 0;
+		/*
         window.addEventListener("wheel", async e => {
 
             // Prevent the default way to scroll the page
@@ -1413,6 +1414,7 @@
                 dy = 0;
             }
         }, { passive: false });
+		*/
 
         // For every link grab its target element and add the click event to smooth scroll to that element
         let links = document.querySelectorAll('a[href^="#"]');
@@ -1456,6 +1458,6 @@
             })();
         }
     </script>
--->
+
   </body>
 </html>
