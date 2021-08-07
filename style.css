@@ -11,7 +11,7 @@
   padding-right: 20px;
 }
 
-.btn-skewed > a {
+.btn-skewed > span {
   display: inline-block;
   transform: skewX(0.5rad);
   width: 100%;
